@@ -1,0 +1,14 @@
+--query1
+select name from student where team = "R" 
+UNION
+select name from student where gender ="F";
+
+--query2
+select team,count(*) from student group by team;
+
+--query3
+select team, avg(math) from student where gender='M' group by team;
+select * from student group by gender,team order by team ;
+
+--query4
+select team, avg(sci) from student group by team ORDER BY avg(sci) DESC limit 2;
